@@ -1,0 +1,123 @@
+<!doctype html>
+<!DOCTYPE html><html lang="ar" dir="rtl"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="موسوعة عربية توثق بطاركة الكنيسة القبطية الأرثوذكسية عبر العصور.">
+  <meta name="theme-color" content="#102d37">
+  <title>نيوتي | بطاركة الكنيسة القبطية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&amp;family=Marhey:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="assets/css/style.css?v=7">
+  <link rel="stylesheet" href="assets/css/import.css?v=7">
+  <link rel="stylesheet" href="assets/css/gamification.css?v=7">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main-content">انتقل إلى المحتوى</a>
+  <div class="progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" data-view-link="home" aria-label="نيوتي - الرئيسية" id="mainBrandLink">
+        <span class="brand-mark" aria-hidden="true">⳨</span>
+        <span><strong class="app-title-brand">نيوتي</strong><small>موسوعة بطاركة الكنيسة القبطية</small></span>
+      </a>
+      <nav class="main-nav" aria-label="التنقل الرئيسي">
+        <a class="active" aria-current="page" href="index.html" data-view-link="home">الرئيسية</a>
+        <a href="patriarchs.html" data-view-link="patriarchs">البطاركة</a>
+        <a href="timeline.html" data-view-link="timeline">الخط الزمني</a>
+        <a href="quiz.html" data-view-link="quiz">سؤال اليوم</a>
+        <a href="favorites.html" data-view-link="favorites">المفضلة <span class="nav-count" id="favoriteCount">0</span></a>
+        <a href="gamification.html" data-view-link="gamification">لوحة الإنجازات <span class="nav-count" id="gamificationLevelBadge" style="background:var(--gold-pale);color:var(--gold);">١</span></a>
+      </nav>
+      <div class="nav-actions">
+        <a class="user-badge" id="headerBadge" title="المستوى والنقاط" aria-label="لوحة الإنجازات" data-view-link="gamification" href="gamification.html">
+          <span class="badge-icon">🏆</span>
+          <span class="badge-text"><span id="userLevel">١</span> ? <span id="userPoints">٠</span> ن</span>
+        </a>
+        <button class="icon-button" id="themeToggle" aria-label="تبديل الوضع الليلي" title="تبديل الوضع الليلي">☾</button>
+        <button class="menu-button" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="view active" id="homeView" aria-labelledby="homeTitle">
+      <section class="hero">
+        <div class="hero-pattern" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow"><span></span> رحلة إيمان تمتد عبر ألفي عام</p>
+            <h1 id="homeTitle">حكاية الكرسي المرقسي،<br><em>محفوظة للأجيال.</em></h1>
+            <p class="hero-text">موسوعة عربية تستكشف سير بطاركة الكنيسة القبطية الأرثوذكسية منذ القديس مرقس الرسول وحتى يومنا هذا.</p>
+            <div class="hero-search" role="search">
+              <label class="sr-only" for="heroSearch">ابحث في الموسوعة</label>
+              <span aria-hidden="true">⌕</span>
+              <input id="heroSearch" type="search" autocomplete="off" placeholder="ابحث بالاسم أو الرقم أو القرن أو كلمة مفتاحية&amp;">
+              <button id="heroSearchButton">ابحث</button>
+              <div class="suggestions" id="searchSuggestions" hidden=""></div>
+            </div>
+            <div class="hero-links">
+              <button class="text-button" data-query="القديس مرقس">القديس مرقس</button>
+              <button class="text-button" data-query="القرن الرابع">القرن الرابع</button>
+              <button class="text-button" data-query="أثناسيوس">البابا أثناسيوس</button>
+            </div>
+          </div>
+          <div class="hero-art reveal" aria-label="رسم تجريدي مستوحى من التراث القبطي">
+            <div class="sun"></div><div class="arch arch-one"></div><div class="arch arch-two"></div>
+            <div class="manuscript"><span>Ⲡⲓⲥⲧⲓⲥ</span><i></i><i></i><i></i><small>الإيمان</small></div>
+            <div class="cross">⳨</div><div class="mosaic m1"></div><div class="mosaic m2"></div><div class="mosaic m3"></div>
+          </div>
+        </div>
+        <div class="hero-bottom container"><span>٢٬٠٠٠+ عام من التاريخ</span><span class="scroll-hint">اكتشف المزيد <b>↓</b></span></div>
+      </section>
+
+      <section class="container featured-section section-space" aria-labelledby="featuredTitle">
+        <div class="section-heading reveal"><div><p class="eyebrow"><span></span> شخصية مضيئة</p><h2 id="featuredTitle">بطريرك في دائرة الضوء</h2></div><button class="link-button" data-view-link="patriarchs" href="patriarchs.html">عرض كل البطاركة ←</button></div>
+        <article class="featured-card reveal" id="featuredCard"></article>
+      </section>
+
+      <section class="container section-space" aria-labelledby="todayTitle">
+        <div class="today-card reveal">
+          <div class="today-ornament" aria-hidden="true">✦</div>
+          <div class="today-copy"><p class="eyebrow"><span></span> تأمل اليوم</p><h2 id="todayTitle">هل تعرف تاريخ كنيستك؟</h2><p>اختبر معرفتك بسؤال يومي قصير، واكتشف المعلومة وراء الإجابة.</p></div>
+          <div class="today-question"><span>سؤال اليوم</span><strong>من هو البطريرك الذي لُقِّب بـ ?الرسولي?؟</strong><button class="primary-button" data-view-link="quiz" href="quiz.html">ابدأ السؤال <span>←</span></button></div>
+        </div>
+      </section>
+
+      <section class="container section-space" aria-labelledby="latestTitle">
+        <div class="section-heading reveal"><div><p class="eyebrow"><span></span> اكتشف السير</p><h2 id="latestTitle">بطاركة بارزون في تاريخنا</h2></div><div class="carousel-controls"><button id="prevFeatured" aria-label="السابق">→</button><button id="nextFeatured" aria-label="التالي">←</button></div></div>
+        <div class="patriarch-grid" id="homePatriarchs"></div>
+      </section>
+
+      <section class="stats-band section-space">
+        <div class="container stats-grid reveal">
+          <div><strong class="counter" data-count="118">0</strong><span>بطريركًا موثقًا</span></div><div><strong class="counter" data-count="20">0</strong><span>قرنًا من التاريخ</span></div><div><strong class="counter" data-count="64">0</strong><span>سيرة قيد الإثراء</span></div><div><strong class="counter" data-count="365">0</strong><span>سؤالًا يوميًا</span></div>
+        </div>
+      </section>
+
+      <section class="container section-space categories" aria-labelledby="categoriesTitle">
+        <div class="section-heading reveal"><div><p class="eyebrow"><span></span> تصفح بحسب الفترة</p><h2 id="categoriesTitle">محطات في تاريخ الكنيسة</h2></div></div>
+        <div class="category-grid reveal" id="categoryGrid"></div>
+      </section>
+    </section>
+
+    
+
+    
+
+    
+
+    
+
+    </main>
+
+  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="index.html" data-view-link="home" id="footerBrandLink"><span class="brand-mark">⳨</span><span><strong class="app-title-brand">نيوتي</strong><small>موسوعة للتاريخ والإيمان</small></span></a><p>منصة عربية غير ربحية تسعى إلى تقديم تاريخ بطاركة الكنيسة القبطية بلغة معاصرة ومصادر موثوقة.</p></div><div><h3>استكشف</h3><a href="patriarchs.html" data-view-link="patriarchs">دليل البطاركة</a><a href="timeline.html" data-view-link="timeline">الخط الزمني</a><a href="quiz.html" data-view-link="quiz">سؤال اليوم</a></div><div><h3>تواصل معنا</h3><p>للملاحظات والمصادر التاريخية</p><a href="mailto:hello@example.com">hello@example.com</a><p class="copyright">? <span id="year"></span> <span class="app-title-brand">نيوتي</span></p></div></div></footer>
+
+  <dialog class="details-modal" id="detailsModal"><button class="modal-close" id="modalClose" aria-label="إغلاق">?</button><div id="modalContent"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/app.js?v=7"></script>
+
+
+</body></html>

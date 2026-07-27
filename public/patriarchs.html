@@ -1,0 +1,79 @@
+<!doctype html>
+<!DOCTYPE html><html lang="ar" dir="rtl"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="موسوعة عربية توثق بطاركة الكنيسة القبطية الأرثوذكسية عبر العصور.">
+  <meta name="theme-color" content="#102d37">
+  <title>نيوتي | بطاركة الكنيسة القبطية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&amp;family=Marhey:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="assets/css/style.css?v=7">
+  <link rel="stylesheet" href="assets/css/import.css?v=7">
+  <link rel="stylesheet" href="assets/css/gamification.css?v=7">
+</head>
+<body data-page="patriarchs">
+  <a class="skip-link" href="#main-content">انتقل إلى المحتوى</a>
+  <div class="progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" data-view-link="home" aria-label="نيوتي - الرئيسية" id="mainBrandLink">
+        <span class="brand-mark" aria-hidden="true">⳨</span>
+        <span><strong class="app-title-brand">نيوتي</strong><small>موسوعة بطاركة الكنيسة القبطية</small></span>
+      </a>
+      <nav class="main-nav" aria-label="التنقل الرئيسي">
+        <a href="index.html" data-view-link="home">الرئيسية</a>
+        <a class="active" aria-current="page" href="patriarchs.html" data-view-link="patriarchs">البطاركة</a>
+        <a href="timeline.html" data-view-link="timeline">الخط الزمني</a>
+        <a href="quiz.html" data-view-link="quiz">سؤال اليوم</a>
+        <a href="favorites.html" data-view-link="favorites">المفضلة <span class="nav-count" id="favoriteCount">0</span></a>
+        <a href="gamification.html" data-view-link="gamification">لوحة الإنجازات <span class="nav-count" id="gamificationLevelBadge" style="background:var(--gold-pale);color:var(--gold);">١</span></a>
+      </nav>
+      <div class="nav-actions">
+        <a class="user-badge" id="headerBadge" title="المستوى والنقاط" aria-label="لوحة الإنجازات" data-view-link="gamification" href="gamification.html">
+          <span class="badge-icon">🏆</span>
+          <span class="badge-text"><span id="userLevel">١</span> ? <span id="userPoints">٠</span> ن</span>
+        </a>
+        <button class="icon-button" id="themeToggle" aria-label="تبديل الوضع الليلي" title="تبديل الوضع الليلي">☾</button>
+        <button class="menu-button" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+
+    <section class="view active" id="patriarchsView" aria-labelledby="patriarchsTitle">
+      <div class="page-hero compact"><div class="container"><p class="eyebrow"><span></span> دليل موسوعي</p><h1 id="patriarchsTitle">بطاركة الكنيسة القبطية</h1><p>تتبع السلسلة البطريركية من مؤسس الكرسي المرقسي إلى البابا الحالي.</p></div></div>
+      <section class="container page-content">
+        <div class="filter-panel" aria-label="خيارات البحث والفرز">
+          <div class="filter-search"><span>⌕</span><input id="directorySearch" type="search" placeholder="ابحث في الأسماء والسير والأحداث&amp;"></div>
+          <label>الترتيب<select id="sortSelect"><option value="chronological">تاريخي: الأقدم فالأحدث</option><option value="reverse">تاريخي: الأحدث فالأقدم</option><option value="number">رقم البطريرك</option><option value="arabic">الاسم العربي</option><option value="english">الاسم الإنجليزي</option><option value="enthronement">تاريخ التجليس</option><option value="departure">تاريخ النياحة</option></select></label>
+          <label>القرن<select id="centuryFilter"><option value="">كل القرون</option></select></label>
+          <label>العصر<select id="eraFilter"><option value="">كل العصور</option></select></label>
+          <button class="reset-button" id="resetFilters">إعادة الضبط</button>
+        </div>
+        <div class="directory-meta"><strong id="resultsCount">0</strong> نتيجة <span id="activeFilters"></span></div>
+        <div class="patriarch-grid directory-grid" id="patriarchsGrid"></div>
+        <div class="empty-state" id="emptyState" hidden=""><span>⌕</span><h3>لم نعثر على نتيجة مطابقة</h3><p>سنحاول الآن إنشاء بطاقة موثقة للسيرة التي تبحث عنها.</p><div class="auto-import" id="autoImportPanel" hidden="" aria-live="polite"><div class="import-icon">✦</div><div><strong id="importTitle">جارٍ البحث عن السيرة&amp;</strong><p id="importStatus">نبحث في المصادر المتاحة لإنشاء بطاقة أولية.</p></div></div><button class="secondary-button" id="clearSearch">عرض جميع البطاركة</button></div>
+      </section>
+    </section>
+
+    
+
+    
+
+    
+
+    </main>
+
+  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="index.html" data-view-link="home" id="footerBrandLink"><span class="brand-mark">⳨</span><span><strong class="app-title-brand">نيوتي</strong><small>موسوعة للتاريخ والإيمان</small></span></a><p>منصة عربية غير ربحية تسعى إلى تقديم تاريخ بطاركة الكنيسة القبطية بلغة معاصرة ومصادر موثوقة.</p></div><div><h3>استكشف</h3><a href="patriarchs.html" data-view-link="patriarchs">دليل البطاركة</a><a href="timeline.html" data-view-link="timeline">الخط الزمني</a><a href="quiz.html" data-view-link="quiz">سؤال اليوم</a></div><div><h3>تواصل معنا</h3><p>للملاحظات والمصادر التاريخية</p><a href="mailto:hello@example.com">hello@example.com</a><p class="copyright">? <span id="year"></span> <span class="app-title-brand">نيوتي</span></p></div></div></footer>
+
+  <dialog class="details-modal" id="detailsModal"><button class="modal-close" id="modalClose" aria-label="إغلاق">?</button><div id="modalContent"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/app.js?v=7"></script>
+
+
+</body></html>

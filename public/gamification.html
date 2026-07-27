@@ -1,0 +1,144 @@
+<!doctype html>
+<!DOCTYPE html><html lang="ar" dir="rtl"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="موسوعة عربية توثق بطاركة الكنيسة القبطية الأرثوذكسية عبر العصور.">
+  <meta name="theme-color" content="#102d37">
+  <title>نيوتي | بطاركة الكنيسة القبطية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&amp;family=Marhey:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="assets/css/style.css?v=7">
+  <link rel="stylesheet" href="assets/css/import.css?v=7">
+  <link rel="stylesheet" href="assets/css/gamification.css?v=7">
+</head>
+<body data-page="gamification">
+  <a class="skip-link" href="#main-content">انتقل إلى المحتوى</a>
+  <div class="progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" data-view-link="home" aria-label="نيوتي - الرئيسية" id="mainBrandLink">
+        <span class="brand-mark" aria-hidden="true">⳨</span>
+        <span><strong class="app-title-brand">نيوتي</strong><small>موسوعة بطاركة الكنيسة القبطية</small></span>
+      </a>
+      <nav class="main-nav" aria-label="التنقل الرئيسي">
+        <a href="index.html" data-view-link="home">الرئيسية</a>
+        <a href="patriarchs.html" data-view-link="patriarchs">البطاركة</a>
+        <a href="timeline.html" data-view-link="timeline">الخط الزمني</a>
+        <a href="quiz.html" data-view-link="quiz">سؤال اليوم</a>
+        <a href="favorites.html" data-view-link="favorites">المفضلة <span class="nav-count" id="favoriteCount">0</span></a>
+        <a class="active" aria-current="page" href="gamification.html" data-view-link="gamification">لوحة الإنجازات <span class="nav-count" id="gamificationLevelBadge" style="background:var(--gold-pale);color:var(--gold);">١</span></a>
+      </nav>
+      <div class="nav-actions">
+        <a class="user-badge" id="headerBadge" title="المستوى والنقاط" aria-label="لوحة الإنجازات" data-view-link="gamification" href="gamification.html">
+          <span class="badge-icon">🏆</span>
+          <span class="badge-text"><span id="userLevel">١</span> ? <span id="userPoints">٠</span> ن</span>
+        </a>
+        <button class="icon-button" id="themeToggle" aria-label="تبديل الوضع الليلي" title="تبديل الوضع الليلي">☾</button>
+        <button class="menu-button" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+
+    
+
+    
+
+    
+
+    
+
+    <section class="view active" id="gamificationView" aria-labelledby="gamificationTitle">
+      <div class="page-hero compact" style="background:linear-gradient(125deg,#1f3d3c 0%,#0f2827 100%);"><div class="container"><p class="eyebrow"><span></span> نظام الأوسمة والتحفيز</p><h1 id="gamificationTitle">لوحة الإنجازات والوسام الكنسي</h1><p>اجمع النقاط لرفع مستواك وفتح أوسمة تفاعلية عند تصفح تاريخ كنيستك.</p></div></div>
+      <section class="container page-content">
+        <div class="gamification-dashboard" style="display:grid;grid-template-columns:1fr 2fr;gap:30px;align-items:start;">
+          
+          <!-- User Stats Card -->
+          <div class="stats-panel-card" style="background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:25px;box-shadow:var(--shadow);text-align:center;">
+            <div class="avatar-trophy" style="font-size:75px;margin-bottom:15px;animation:float 3s ease-in-out infinite;">🏆</div>
+            <h2 style="font:700 20px Marhey;margin:0;">المستوى <span id="dashLevel">١</span></h2>
+            <p style="color:var(--ink-soft);font-size:11px;margin:5px 0 20px;" id="levelTitle">المؤرخ المبتدئ</p>
+            
+            <div class="progress-bar-container" style="background:var(--line);border-radius:10px;height:12px;width:100%;margin-bottom:8px;overflow:hidden;position:relative;">
+              <div id="levelProgress" style="background:var(--gold);height:100%;width:0%;transition:width 0.4s ease;"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:10px;font-weight:700;color:var(--ink-soft);margin-bottom:25px;">
+              <span id="currentPointsProgress">٠ نقطة</span>
+              <span id="nextLevelPointsProgress">١٠٠ نقطة للمستوى التالي</span>
+            </div>
+            
+            <div class="stats-mini-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;border-top:1px solid var(--line);padding-top:20px;text-align:right;">
+              <div>
+                <strong style="display:block;font-size:18px;font-family:Marhey;color:var(--teal);" id="statStreak">٠</strong>
+                <small style="font-size:9px;color:var(--ink-soft);">سلسلة الأيام الحالية</small>
+              </div>
+              <div>
+                <strong style="display:block;font-size:18px;font-family:Marhey;color:var(--gold);" id="statTotalPoints">٠</strong>
+                <small style="font-size:9px;color:var(--ink-soft);">إجمالي النقاط</small>
+              </div>
+              <div>
+                <strong style="display:block;font-size:18px;font-family:Marhey;color:var(--ink);" id="statBiographiesCount">٠</strong>
+                <small style="font-size:9px;color:var(--ink-soft);">سير تمت قراءتها</small>
+              </div>
+              <div>
+                <strong style="display:block;font-size:18px;font-family:Marhey;color:#bc5541;" id="statFavoritesCount">٠</strong>
+                <small style="font-size:9px;color:var(--ink-soft);">محفوظ في المفضلة</small>
+              </div>
+            </div>
+            <div class="streak-calendar-wrap">
+              <div class="streak-calendar-heading"><span>آخر ٧ أيام</span><small>محفوظ محليًا على هذا الجهاز</small></div>
+              <div class="streak-calendar" id="streakCalendar" aria-label="سجل سلسلة النشاط لآخر سبعة أيام"></div>
+            </div>
+          </div>
+
+          <!-- Main Content Panel (Quests & Logs) -->
+          <div class="quests-and-logs" style="display:grid;gap:30px;">
+            
+            <!-- Daily Quests -->
+            <div class="quests-card" style="background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);">
+              <h3 style="font:700 18px Marhey;margin:0 0 18px;border-bottom:1px solid var(--line);padding-bottom:10px;display:flex;align-items:center;gap:8px;">
+                <span>🎯</span> المهام اليومية والنشطة
+              </h3>
+              <div class="quests-list" style="display:grid;gap:15px;" id="questsList">
+                <!-- Will be dynamically populated -->
+              </div>
+            </div>
+
+            <!-- Earned Badges -->
+            <div class="badges-card" style="background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);">
+              <h3 style="font:700 18px Marhey;margin:0 0 18px;border-bottom:1px solid var(--line);padding-bottom:10px;display:flex;align-items:center;gap:8px;">
+                <span>🛡️</span> الأوسمة والنياشين المفتوحة
+              </h3>
+              <div class="badges-grid" style="display:grid;grid-template-columns:repeat(auto-fill, minmax(130px, 1fr));gap:15px;" id="badgesGrid">
+                <!-- Will be dynamically populated -->
+              </div>
+            </div>
+
+            <!-- Activity Logs -->
+            <div class="logs-card" style="background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);">
+              <h3 style="font:700 18px Marhey;margin:0 0 18px;border-bottom:1px solid var(--line);padding-bottom:10px;display:flex;align-items:center;gap:8px;">
+                <span>📜</span> سجل الأنشطة والإنجازات الأخير
+              </h3>
+              <div class="logs-list" style="display:grid;gap:10px;" id="logsList">
+                <!-- Will be dynamically populated -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+  </section></main>
+
+  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="index.html" data-view-link="home" id="footerBrandLink"><span class="brand-mark">⳨</span><span><strong class="app-title-brand">نيوتي</strong><small>موسوعة للتاريخ والإيمان</small></span></a><p>منصة عربية غير ربحية تسعى إلى تقديم تاريخ بطاركة الكنيسة القبطية بلغة معاصرة ومصادر موثوقة.</p></div><div><h3>استكشف</h3><a href="patriarchs.html" data-view-link="patriarchs">دليل البطاركة</a><a href="timeline.html" data-view-link="timeline">الخط الزمني</a><a href="quiz.html" data-view-link="quiz">سؤال اليوم</a></div><div><h3>تواصل معنا</h3><p>للملاحظات والمصادر التاريخية</p><a href="mailto:hello@example.com">hello@example.com</a><p class="copyright">? <span id="year"></span> <span class="app-title-brand">نيوتي</span></p></div></div></footer>
+
+  <dialog class="details-modal" id="detailsModal"><button class="modal-close" id="modalClose" aria-label="إغلاق">?</button><div id="modalContent"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/app.js?v=7"></script>
+
+
+</body></html>

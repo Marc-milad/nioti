@@ -1,0 +1,24 @@
+.auto-import{max-width:520px;margin:0 auto 22px;display:flex;text-align:right;align-items:center;gap:13px;background:var(--gold-pale);border:1px solid rgba(203,160,85,.35);padding:14px 17px;border-radius:11px}.auto-import .import-icon{width:37px;height:37px;display:grid;place-items:center;border-radius:50%;background:var(--gold);color:var(--navy);font-size:18px;animation:pulse 1.3s infinite}.auto-import strong{font-size:11px;color:var(--ink)}.auto-import p{margin:2px 0 0;font-size:10px!important}.auto-import.is-complete .import-icon{animation:none;background:var(--teal);color:#fff}.source-link{color:var(--teal);font-weight:700}@keyframes pulse{50%{transform:scale(.9);opacity:.7}}
+
+/* Gamification Styles */
+.user-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(216,173,97,0.18);
+}
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+@media (max-width: 900px) {
+  .gamification-dashboard {
+    grid-template-columns: 1fr !important;
+  }
+}
+.quests-list div, .logs-list div {
+  transition: all 0.25s ease;
+}
+.quests-list div:hover {
+  transform: translateX(-3px);
+}
+

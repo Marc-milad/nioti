@@ -1,0 +1,109 @@
+.streak-calendar-wrap {
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  text-align: right;
+}
+
+.streak-calendar-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.streak-calendar-heading small {
+  font-size: 8px;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+.streak-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  direction: rtl;
+}
+
+.streak-day {
+  min-width: 0;
+  padding: 6px 2px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  text-align: center;
+  color: var(--ink-soft);
+  background: var(--cream);
+}
+
+.streak-day i {
+  display: block;
+  min-height: 18px;
+  font-size: 13px;
+  font-style: normal;
+  line-height: 18px;
+}
+
+.streak-day small {
+  display: block;
+  white-space: nowrap;
+  font-size: 7px;
+  line-height: 1.4;
+}
+
+.streak-day.is-active {
+  background: var(--gold-pale);
+  border-color: var(--gold);
+  color: #916721;
+}
+
+.streak-day.is-today {
+  box-shadow: 0 0 0 2px var(--teal-light);
+}
+
+.main-nav a[aria-current="page"] {
+  color: var(--ink);
+}
+
+.main-nav a[aria-current="page"]::after {
+  width: 100%;
+}
+
+.user-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border: 1px solid rgba(216, 173, 97, 0.35);
+  border-radius: 999px;
+  background: var(--gold-pale);
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.user-badge:hover,
+.user-badge:focus-visible {
+  border-color: var(--gold);
+  box-shadow: 0 4px 12px rgba(216, 173, 97, .2);
+  transform: translateY(-1px);
+}
+
+.user-badge:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+@media (max-width: 900px) {
+  .gamification-dashboard { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 380px) {
+  .streak-calendar-heading { align-items: flex-start; flex-direction: column; gap: 2px; }
+  .streak-day small { font-size: 6px; }
+}
